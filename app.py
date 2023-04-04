@@ -35,6 +35,7 @@ def student_view(student_id):
         flash(f'Student attempting to be viewed could not be found!', 'error')
         return redirect(url_for('student_view_all'))
 
+
 @app.route('/student/create', methods=['GET', 'POST'])
 def student_create():
     if request.method == 'GET':
@@ -96,6 +97,7 @@ def student_edit(student_id):
         return redirect(url_for('student_view_all'))
 
     return redirect(url_for('student_view_all'))
+
 
 @app.route('/student/delete/<int:student_id>')
 def student_delete(student_id):

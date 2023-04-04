@@ -69,8 +69,8 @@
   </div>
 
  <div class="col-md-4">
-    {% if action and action in ['create', 'update'] %}
     <label for="email" id="email" class="form-label"><strong>Email</strong></label>
+    {% if action and action in ['create', 'update'] %}
     <input type="email" class="form-control" id="email" name="email" maxlength="100" value="{{ student['email'] if student else '' }}" required>
     {% else %}
         <br>{{ student['email'] }}
